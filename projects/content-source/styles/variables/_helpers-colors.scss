@@ -1,0 +1,264 @@
+@mixin theme($name) {
+  .#{$name} {
+
+    .border-top-1 {
+      border-top: 1px solid $gray-lighter !important;
+    }
+
+    .border-right-1 {
+      border-right: 1px solid $gray-lighter !important;
+    }
+
+    .border-bottom-1 {
+      border-bottom: 1px solid $gray-lighter !important;
+    }
+
+    .border-bottom-2-yellowmed {
+      border-bottom: 2px solid $widget-orange !important;
+    }
+
+    .border-left-1 {
+      border-left: 1px solid $gray-lighter !important;
+    }
+
+    .border-gray-med-1 {
+      border: 1px solid $gray-med !important;
+    }
+
+    .border-top-yellow-1 {
+      border-top: 1px solid $yellow !important;
+    }
+
+    .no-box-shadow {
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .bg-white {
+      background: $white !important;
+    }
+
+    .bg-inverse {
+      background: $dark-blue !important;
+    }
+
+    .bg-inverse-light {
+      background: $gray-blue !important;
+    }
+
+    .bg-inverse-dark {
+      background: $gray-dark !important;
+    }
+
+    .bg-grey {
+      background: $white-txt !important;
+    }
+
+    .bg-grey-light {
+      background: $gray-dark-blue !important;
+    }
+
+    .bg-grey-dark {
+      background: $gray-less-dark !important;
+    }
+
+    .bg-grey-darker {
+      background: $dark !important;
+    }
+
+    .bg-purple {
+      background: $purple-light !important;
+    }
+
+    .bg-purple-light {
+      background: $purple-lighter !important;
+    }
+
+    .bg-purple-dark {
+      background: $purple !important;
+    }
+
+    .bg-primary {
+      background: $curious-blue !important;
+    }
+
+    .bg-primary-light {
+      background: $havelock-blue !important;
+    }
+
+    .bg-primary-dark {
+      background: $merica-blue-light-dark !important;
+    }
+
+    .bg-info {
+      background: $blue-light-dark !important;
+    }
+
+    .bg-info-light {
+      background: $viking !important;
+    }
+
+    .bg-info-dark {
+      background: $jelly-bean !important;
+    }
+
+    .bg-success {
+      background: $green-dark !important;
+    }
+
+    .bg-success-light {
+      background: $green-light !important;
+    }
+
+    .bg-success-dark {
+      background: darken($green-dark, 10%) !important;
+    }
+
+    .bg-lime {
+      background: $green !important;
+    }
+
+    .bg-lime-light {
+      background: $de-york !important;
+    }
+
+    .bg-lime-dark {
+      background: $fruit-salad !important;
+    }
+
+    .bg-warning {
+      background: $widget-orange !important;
+    }
+
+    .bg-warning-light {
+      background: $yellow !important;
+    }
+
+    .bg-warning-dark {
+      background: $yellow-dark !important;
+    }
+
+    .bg-danger {
+      background: $red !important;
+    }
+
+    .bg-danger-light {
+      background: $red-light !important;
+    }
+
+    .bg-danger-dark {
+      background: $red-dark !important;
+    }
+
+    .no-bg {
+      background: none !important;
+    }
+
+    .text-muted {
+      color: $white-txt;
+    }
+
+
+
+    .text-green {
+      color: $green !important;
+    }
+
+
+    .text-red {
+      color: $red !important;
+    }
+
+
+
+    .text-inverse {
+      color: $gray-dark;
+    }
+
+    .text-purple {
+      color: $purple;
+    }
+
+    .text-primary {
+      color: $merica-blue-light-dark;
+    }
+
+    .text-info {
+      color: $jelly-bean;
+    }
+
+    .text-success {
+      color: darken($green-dark, 10%) !important;
+    }
+
+    .text-lime {
+      color: $fruit-salad;
+    }
+
+    .text-warning {
+      color: $yellow !important;
+    }
+
+    .text-danger {
+      color: $red !important;
+    }
+
+    .text-inverse-light {
+      color: $dark-blue;
+    }
+
+    .text-purple-light {
+      color: $purple-light;
+    }
+
+    .text-primary-light {
+      color: $curious-blue;
+    }
+
+    .text-info-light {
+      color: $blue-light-dark;
+    }
+
+    .text-success-light {
+      color: $green-dark;
+    }
+
+    .text-lime-light {
+      color: $green;
+    }
+
+    .text-warning-light {
+      color: $widget-orange;
+    }
+
+    .text-danger-light {
+      color: $red;
+    }
+
+    .underline {
+      border-bottom: 1px solid $gray-less !important;
+    }
+
+    .link a {
+      color: $yellow-med;
+    }
+
+    .label-important {
+      color: $red;
+    }
+
+    .card {
+      .label-important {
+        color: darken($red, 30%) !important;
+      }
+    }
+  }
+}
+
+@if $theme-dark==true {
+  @include theme(dark);
+}
+
+@if $theme-dark==false {
+  @include theme(light);
+}

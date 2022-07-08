@@ -1,0 +1,275 @@
+/* Modal Setting */
+
+.modal-backdrop.in {
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 9991;
+}
+
+.modal {
+  position: fixed;
+  padding: 0 20px;
+  z-index: 9992;
+
+  .modal-dialog {
+
+    //Adding for Angular Bootstrap Large modal
+    &.modal-lg {
+      width: 1100px !important;
+      z-index: 1004;
+    }
+
+    .modal-content {
+      background: $modalContentBackground;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: none;
+      @include border-radius(5px);
+
+      .modal-header {
+        border-bottom: 2px solid $yellow-med;
+        padding: 15px 20px 12px;
+
+        h4 {
+          color: $modalContentHeader;
+        }
+
+        .close {
+          color: $modalContentHeader;
+          opacity: 1;
+          text-shadow: none;
+          -webkit-text-shadow: none;
+          -moz-text-shadow: none;
+        }
+      }
+
+      .validate-header {
+        border-bottom: 2px solid $green !important;
+      }
+
+      .modal-body {
+        padding: 15px 20px;
+
+        &.singlePhotoModal {
+          padding: 0px;
+
+          .mfp-content {
+            .carousel-indicators {
+              display: none;
+            }
+
+            .left {
+              &.carousel-control {
+                left: -70px;
+              }
+            }
+
+            .right {
+              &.carousel-control {
+                right: -70px;
+              }
+            }
+          }
+
+          .mfp-bottom-bar {
+            padding-left: 10px;
+
+            .mfp-title {
+              font-size: 16px;
+              color: $white;
+            }
+
+            .mfp-counter {
+              right: 10px;
+              font-size: 14px;
+              color: $white;
+            }
+          }
+        }
+
+        .modal-icon {
+          .fa {
+            background: $yellow-med;
+            @include border-radius(50%);
+            padding: 18px;
+            width: 80px;
+            height: 80px;
+
+            &.fa-green {
+              background: $green !important;
+            }
+          }
+
+          i {
+            color: $white-txt;
+            font-size: 44px;
+          }
+        }
+
+        p {
+          color: $white-txt;
+          position: relative;
+          top: 50%;
+
+          // transform: translateY(50%);
+          &.text {
+            position: static;
+            transform: initial;
+            line-height: 25px;
+          }
+        }
+      }
+
+      .modal-footer {
+        padding: 15px 20px;
+        border-top: 2px solid $yellow-med;
+
+        .icon {
+          border-color: $gray-modal !important;
+        }
+      }
+
+      .validate-footer {
+        border-top: 2px solid $green !important;
+
+        .btn-green {
+          background: $gray-dark !important;
+        }
+      }
+    }
+  }
+
+  &.modal-message {
+    .modal-dialog {
+      width: 100%;
+      margin: 0;
+    }
+
+    .modal-content {
+      @include border-radius(0);
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+      width: 60%;
+      border: none;
+      margin: 0 auto;
+    }
+  }
+
+  &.modal-delete {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          border-bottom: 2px solid darken($delete, 25%);
+        }
+
+        .modal-body {
+          .modal-icon {
+            .fa {
+              background: darken($delete, 25%);
+            }
+          }
+        }
+
+        .modal-footer {
+          border-top: 2px solid darken($delete, 25%);
+
+          .btn-delete {
+            background: darken($delete, 25%);
+          }
+        }
+
+        .widget-header {
+          .modal-close {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.modal-success {
+    .modal-dialog {
+      .modal-content {
+        .modal-header {
+          border-bottom: 2px solid $green-dark;
+        }
+
+        .modal-body {
+          .modal-icon {
+            .fa {
+              background: $green-dark;
+              padding: 20px 0 0 0;
+            }
+          }
+        }
+
+        .modal-footer {
+          border-top: 2px solid $green-dark;
+        }
+      }
+    }
+  }
+
+  // for angular modals -GTS
+  &.modal-lge {
+    .modal-dialog {
+      max-width: 1100px;
+      width: 100%;
+
+      .modal-body {
+
+        height: 375px;
+
+      }
+    }
+  }
+
+  // for other large modals like staff search - GTS
+  &.modal-lg {
+    .modal-dialog {
+      max-width: 1100px;
+      width: 100%;
+    }
+  }
+
+  &.modal-small {
+    top: 80px;
+
+    .modal-dialog {
+      max-width: 340px;
+      width: 100%;
+
+      .modal-content {
+        .modal-body {
+          padding: 0px 20px;
+
+          .tiles {
+            section {
+              margin-bottom: 0px;
+              min-height: 192px;
+              max-height: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Only one used for confirmation messages */
+  &.timed-modal {
+    .modal-content {
+      border: 1px solid $yellow-med !important;
+
+      p {
+        color: $yellow !important;
+        margin: 0 auto;
+        position: static !important;
+        transform: initial !important;
+        font-size: 16px;
+      }
+    }
+  }
+}

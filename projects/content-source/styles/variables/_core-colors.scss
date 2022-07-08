@@ -1,0 +1,1121 @@
+/*Windows 10 Fix For IE 11 Scroll Flickering Issue*/
+
+/* Reset and overrides */
+
+html {
+  background: $black;
+}
+
+
+
+
+
+@mixin theme($name) {
+  .#{$name} {
+    .overlay {
+      @include background-gradient();
+    }
+
+    p {
+      color: $white-txt;
+    }
+
+
+
+
+    /* Page Loader */
+
+    .page-loader {
+      background: $black;
+      right: -$sidebar-width;
+
+      .spinner {
+        &:not(:required):before {
+          content: '';
+          border: 2px solid $black-light-transparent;
+          border-top-color: $black-light-transparent;
+        }
+      }
+    }
+
+
+    /* Pace */
+    .pace {
+      .pace-progress {
+        background: $black;
+
+        .pace-progress-inner {
+          &:before {
+            box-shadow: 0 0 10px $black, 0 0 5px $black;
+          }
+        }
+      }
+
+      .pace-activity {
+        border-top-color: $black;
+        border-left-color: $black;
+      }
+    }
+
+    /* Login & Register Setting */
+
+    .login {
+      .login-content {
+        background: $sidebar;
+        box-shadow: 0 2px 0 $black;
+      }
+
+      small {
+        color: $yellow-med;
+      }
+
+    }
+
+    /* -------------------------------
+   Header
+------------------------------- */
+
+    /* Navbar Element */
+
+    .navbar {
+      left: $sidebar-width;
+      border-bottom: 2px solid $gray-dark;
+      -webkit-box-shadow: 0 1px $black-higher-transparent;
+      box-shadow: 0 1px $black-higher-transparent;
+      height: $navbar-height;
+
+      .navbar-nav {
+        >li {
+          >a {
+            color: $white-txt;
+
+            &:hover,
+            &:focus {
+              color: $yellow-med;
+            }
+
+            &.has-notify {
+              &:before {
+                content: '';
+                background: $red;
+              }
+            }
+          }
+        }
+
+        >.open {
+          .dropdown-menu {
+            li {
+              >a {
+                color: $yellow-med;
+
+                &:hover,
+                &:focus {
+                  color: $yellow-med;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-user {
+        >.dropdown-menu {
+          >a {
+
+            &:hover,
+            &:focus {
+              color: $yellow-med;
+            }
+          }
+        }
+      }
+
+
+    }
+
+
+    .page-right-sidebar-toggled {
+
+      .navbar,
+      .navbar-default {
+        right: $sidebar-width;
+      }
+
+      #banner {
+        .banner {
+          right: $sidebar-width + 10px;
+        }
+      }
+    }
+
+    .page-with-two-sidebar {
+
+      &.page-right-sidebar-toggled {
+
+        .navbar,
+        .navbar-default {
+          right: $sidebar-width;
+        }
+
+        #banner {
+          .banner {
+            right: $sidebar-width + 10px;
+          }
+        }
+
+        .content,
+        .footer,
+        #banner {
+          margin-right: $sidebar-width;
+        }
+      }
+    }
+
+    .page-with-right-sidebar {
+
+      .content,
+      .footer,
+      #banner {
+
+        margin-right: $sidebar-width;
+      }
+
+
+    }
+
+    /* Page Sidebar Minified */
+
+
+
+    /* Page with Right Sidebar */
+
+
+
+
+    /* -------------------------------
+   Content Settings
+------------------------------- */
+
+
+    /* Breadcrumb */
+
+    .breadcrumb {
+
+      a {
+        color: $white-txt;
+      }
+
+      >li {
+        &.active {
+          color: $yellow-med;
+
+        }
+
+        +li:before {
+          color: $yellow-med;
+        }
+      }
+    }
+
+
+    /* Page Header */
+
+    .page-header {
+      color: $white-txt;
+      font-family: $questrial;
+
+      small {
+
+        color: $gray-med;
+
+      }
+
+    }
+
+
+    .page-footer-fixed {
+      .footer {
+
+        left: $sidebar-width;
+
+      }
+
+
+      &.page-with-right-sidebar {
+
+
+        .footer {
+
+          right: $sidebar-width;
+        }
+      }
+
+      &.page-with-two-sidebar {
+        &.page-right-sidebar-toggled {
+          .footer {
+            right: $sidebar-width;
+          }
+        }
+      }
+
+    }
+
+    /* Page with Footer */
+
+
+    /* Page without Sidebar */
+
+
+
+
+    /* -------------------------------
+   5.0 Footer Setting
+------------------------------- */
+
+    /* 5.1 Footer Element */
+
+    .footer {
+      color: $white-txt;
+      background: $footer-bg-color;
+
+      a {
+        color: $white-txt;
+
+        &:hover,
+        &:focus {
+          color: $yellow-med;
+        }
+      }
+
+      b {
+        color: $white;
+      }
+    }
+
+    .sidebar-footer {
+      color: $white-txt;
+
+    }
+
+    .progress-bar-striped {
+      @include progress-stripe();
+
+      .progress-bar {
+        @include progress-stripe();
+
+        &.progress-bar-success,
+        &.progress-bar-info,
+        &.progress-bar-warning,
+        &.progress-bar-danger {
+          @include progress-stripe();
+        }
+      }
+    }
+
+    /* Page with Fixed Footer */
+
+
+
+    /* -------------------------------
+  Top Menu Setting
+------------------------------- */
+
+    /* Top Menu Element */
+
+    .top-menu {
+      background: $sidebar;
+
+      .nav {
+        >li {
+
+          >a {
+            color: $white-txt;
+
+            .badge,
+            .label {
+
+              color: $white;
+              color: $white-txt;
+            }
+
+            i {
+
+              color: $white;
+              color: $white-txt;
+
+            }
+
+            .caret {
+              color: $white-txt;
+            }
+
+            &:hover,
+            &:focus {
+              background: $gray-dark;
+            }
+          }
+
+          &.active {
+            >a {
+              background: $gray-darker;
+              color: $white;
+
+              &:hover,
+              &:focus {
+                background: $gray-darker;
+                color: $white;
+              }
+
+              i {
+                color: $yellow;
+              }
+            }
+          }
+
+          &:hover,
+          &:focus {
+            background: $gray-dark;
+          }
+
+          &.menu-control {
+            background: $dark-blue;
+
+            >a {
+              i {
+                color: $white;
+              }
+            }
+
+            &.menu-control-left {
+              >a {
+                -webkit-box-shadow: 5px 0 8px -3px $black-medium-transparent;
+                box-shadow: 5px 0 8px -3px $black-medium-transparent;
+              }
+            }
+
+            &.menu-control-right {
+              >a {
+                -webkit-box-shadow: -5px 0 8px -3px $black-medium-transparent;
+                box-shadow: -5px 0 8px -3px $black-medium-transparent;
+              }
+            }
+          }
+        }
+
+        .sub-menu {
+          background: $sub-menu;
+
+          >li {
+            >a {
+              color: $white-txt;
+
+              &:hover,
+              &:focus {
+                background: $white;
+              }
+            }
+
+            &.active {
+              >a {
+                background: $gray-darker;
+                color: $white;
+
+                &:hover,
+                &:focus {
+                  background: $gray-darker;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    /* -------------------------------
+   Elements Setting
+------------------------------- */
+
+    /* Progress Bar Setting */
+
+    .progress {
+      background: $gray-light;
+
+      .progress-bar {
+        &.progress-bar-success {
+          background: $green-dark;
+        }
+
+        &.progress-bar-info {
+          background: $blue;
+        }
+
+        &.progress-bar-warning {
+          background: $yellow-med;
+        }
+
+        &.progress-bar-danger {
+          background: $red;
+        }
+      }
+
+
+    }
+
+
+
+
+    /* Label & Badge Setting */
+
+    .badge {
+      background: $gray;
+      color: $white;
+
+      &.badge-default {
+        color: $gray-dark;
+        background: $gray-light;
+      }
+
+      &.badge-white {
+        color: $gray-dark;
+        background: $white;
+      }
+
+      &.badge-info {
+        color: $white-txt;
+        background: $blue;
+      }
+
+      &.badge-success {
+        color: $gray-dark;
+        background: $green-dark;
+      }
+
+      &.badge-warning {
+        color: $gray-dark;
+        background: $yellow-med;
+      }
+
+      &.badge-danger {
+        color: $white-txt;
+        background: $red;
+      }
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $yellow-med;
+    }
+
+
+    legend {
+      border-bottom: 2px solid $yellow-med;
+    }
+
+    .input-group-btn {
+      >.btn {
+        +.btn {
+          border-left: 1px solid $black-light-transparent;
+        }
+      }
+
+
+    }
+
+    .has-success {
+      .form-control {
+        border-color: $green-dark;
+
+        &:hover,
+        &:focus {
+          border-color: $green-light;
+        }
+
+        .input-group-addon {
+          background: $green-dark;
+          border-color: darken($green-dark, 10%);
+        }
+      }
+
+      .checkbox,
+      .checkbox-inline,
+      .control-label,
+      .help-block,
+      .radio,
+      .radio-inline,
+      .form-control-feedback,
+      .input-group-addon {
+        color: $white;
+      }
+
+      &.checkbox,
+      &.checkbox-inline,
+      &.radio,
+      &.radio-inline {
+        label {
+          color: $white;
+        }
+      }
+    }
+
+    .has-warning {
+      .form-control {
+        border-color: $yellow-med;
+
+        &:hover,
+        &:focus {
+          border-color: $yellow-med;
+        }
+
+        .input-group-addon {
+          background: $yellow-med;
+          border-color: darken($yellow-med, 10%);
+        }
+      }
+
+      .checkbox,
+      .checkbox-inline,
+      .control-label,
+      .help-block,
+      .radio,
+      .radio-inline,
+      .form-control-feedback,
+      .input-group-addon {
+        color: $white;
+      }
+
+      &.checkbox,
+      &.checkbox-inline,
+      &.radio,
+      &.radio-inline {
+        label {
+          color: $white;
+        }
+      }
+    }
+
+
+
+
+    /* Carousel Setting */
+
+
+
+
+
+
+
+    /* Description List Setting */
+
+
+    /* Blockquote Setting */
+
+    blockquote {
+      border-left-color: $yellow-med;
+
+      small {
+        color: $white-txt;
+      }
+    }
+
+
+    /* Panel Setting */
+
+    .panel {
+      -webkit-box-shadow: 0 2px 0 $black-high-transparent;
+      box-shadow: 0 2px 0 $black-high-transparent;
+
+      .panel-heading {
+
+        .panel-title {
+
+          small {
+            color: $white;
+            color: $white-medium-opaque;
+          }
+        }
+
+        .panel-heading-btn {
+          >.btn {
+            box-shadow: 0 1px $black-less-opaque;
+          }
+        }
+      }
+
+      .panel-body {
+        &.panel-form {
+          .form-group {
+            +.form-group {
+              border-top: 2px dashed $gray;
+            }
+          }
+        }
+      }
+
+      .panel-footer {
+        border-top: 2px solid $yellow-dark;
+        background: $yellow-med;
+      }
+
+
+      .panel-toolbar {
+        border-bottom: 2px solid $gray-lighter-white;
+        background: $gray;
+      }
+
+      &.panel-with-tabs {
+
+
+        &.panel-inverse {
+          .nav {
+            &.nav-tabs {
+              >li {
+                >a {
+                  color: $white;
+                }
+
+                &.active {
+                  >a {
+                    color: $white;
+                  }
+                }
+
+                &:not(.active) {
+                  &:after {
+                    background: $sidebar;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.panel-loading {
+        .panel-body {
+          .panel-loader {
+            background: $white;
+          }
+        }
+      }
+    }
+
+
+    /* Spinner Small Setting */
+
+    .spinner-small {
+      &:not(:required) {
+        &:before {
+          border: 2px solid $black-light-transparent;
+          border-top-color: $black-medium-opaque;
+        }
+      }
+    }
+
+    /* Button Element Setting */
+
+    .btn {
+
+      &.active {
+        -webkit-box-shadow: inset 0 3px 5px $black-less-opaque !important;
+        box-shadow: inset 0 3px 5px $black-less-opaque !important;
+      }
+
+    }
+
+    /* Button Group Setting */
+
+    .btn-group {
+      >.btn {
+        +.btn {
+          border-left: 1px solid $black;
+        }
+
+      }
+
+    }
+
+    .btn-group-vertical {
+      >.btn {
+        +.btn {
+          border-top: 1px solid $black;
+        }
+
+      }
+
+    }
+
+
+    .open {
+      >.dropdown-toggle {
+        .btn-default {
+          background: $white-txt;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+
+        .btn-danger {
+          background: $red;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+
+        .btn-warning {
+          background: $yellow-dark;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+
+        .btn-success {
+          background: $green-dark;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+
+        .btn-info {
+          background: $blue;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+
+        .btn-primary {
+          background: $yellow-med;
+          -webkit-box-shadow: 0 1px $gray;
+          box-shadow: 0 1px $gray;
+        }
+      }
+    }
+
+
+    /* Alert Setting */
+
+    .alert {
+
+      .close {
+        color: inherit;
+      }
+
+      .alert-success {
+        background: $green-dark;
+        color: $white;
+
+        &.alert-bordered {
+          border: 1px solid $green-dark;
+        }
+      }
+
+      .alert-info {
+        background: $blue;
+        color: $white;
+
+        &.alert-bordered {
+          border: 1px solid $blue;
+        }
+      }
+
+      .alert-danger {
+        background: $red;
+        color: $white;
+
+        &.alert-bordered {
+          border: 1px solid $red;
+        }
+      }
+
+      .alert-warning {
+        background: $yellow-dark;
+        color: $white;
+
+        &.alert-bordered {
+          border: 1px solid $yellow-dark;
+        }
+      }
+    }
+
+
+    /* Thumbnail Setting */
+
+    .thumbnail {
+
+      &.active,
+      &:focus,
+      &:hover {
+        border-color: $gray;
+      }
+    }
+
+
+    /* Default Link Setting */
+
+    a {
+      color: $white-txt;
+
+      &:focus,
+      &:hover {
+        color: $default-button;
+      }
+    }
+
+
+
+
+    /* Pager Setting */
+
+    .pager {
+      li {
+
+        >a,
+        >span {
+          border: 2px solid $gray;
+          color: $white-txt;
+
+          &:hover,
+          &:focus {
+            background: $yellow-med;
+            color: $white-txt;
+          }
+
+        }
+      }
+
+    }
+
+
+    /* Jumbotron Setting */
+
+    .jumbotron {
+      background: $sidebar;
+    }
+
+
+    /* List Group Setting */
+
+    .list-group {
+      .list-group-item {
+        border: 2px solid $gray;
+
+        &.active {
+          background: $gray;
+          border-color: $black;
+
+          &:hover,
+          &:focus {
+            background: $gray;
+            border-color: $black;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          background: $gray;
+        }
+
+        &.disabled {
+          background: $gray;
+
+          &:hover,
+          &:focus {
+            background: $gray;
+          }
+        }
+      }
+    }
+
+    .list-group-item-success,
+    a.list-group-item-success {
+      background: $green-dark;
+      color: $white-txt;
+
+      &:hover,
+      &:focus {
+        background: darken($green-dark, 10%);
+        color: $white-txt;
+      }
+    }
+
+    .list-group-item-info,
+    a.list-group-item-info {
+      background: $blue;
+      color: $white-txt;
+
+      &:hover,
+      &:focus {
+        background: darken($blue, 10%);
+        color: $white-txt;
+      }
+    }
+
+    .list-group-item-warning,
+    a.list-group-item-warning {
+      background: $yellow-dark;
+      color: $white-txt;
+
+      &:hover,
+      &:focus {
+        background: darken($yellow-dark, 10%);
+        color: $white-txt;
+      }
+    }
+
+    .list-group-item-danger,
+    a.list-group-item-danger {
+      background: $red;
+      color: $white-txt;
+
+      &:hover,
+      &:focus {
+        background: darken($red, 10%);
+        color: $white-txt;
+      }
+    }
+
+
+    /* Well Setting */
+
+    .well {
+      background: $sidebar;
+      -webkit-box-shadow: 0 1px $black-less-opaque;
+      box-shadow: 0 1px $black-less-opaque;
+    }
+
+    /* Nav Tabs & Pills Setting */
+
+    .nav-tabs {
+      color: $sidebar;
+      border-bottom: 2px solid $gray;
+
+      >li {
+        &.active {
+          >a {
+            color: $sidebar;
+
+            &:hover,
+            &:focus {
+              color: $sidebar;
+            }
+          }
+        }
+      }
+
+      &.nav-justified {
+        border-bottom: 2px solid $gray;
+
+        >.active {
+          >a {
+            color: $sidebar;
+
+            &:hover,
+            &:focus {
+              color: $sidebar;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      background: $widgetBackground;
+    }
+
+
+    /* Accordion Setting */
+
+    .panel-title {
+
+      a {
+        &.accordion-toggle {
+
+          &:hover,
+          &:focus {
+            color: $white-txt;
+            background: $black;
+          }
+        }
+      }
+    }
+
+    .panel-white {
+      .panel-title {
+        a {
+          &.accordion-toggle {
+
+            &:hover,
+            &:focus {
+              color: $black;
+              background: $gray-med;
+            }
+          }
+        }
+      }
+
+    }
+
+
+
+    /* Popover Setting */
+
+    .popover {
+      border: 2px solid $black-less-opaque;
+
+      &.top {
+        >.arrow {
+          border-top-color: $black-less-opaque;
+        }
+      }
+
+      &.bottom {
+        >.arrow {
+          border-bottom-color: $black-less-opaque;
+        }
+      }
+
+      &.left {
+        >.arrow {
+          border-left-color: $black-less-opaque;
+        }
+      }
+
+      &.right {
+        >.arrow {
+          border-right-color: $black-less-opaque;
+
+        }
+      }
+    }
+
+    .popover-title {
+      background: $yellow-med;
+    }
+
+
+
+    /* Section Container Setting */
+
+    .section-container {
+      &.section-with-top-border {
+        border-top: 2px solid $gray;
+      }
+
+      &.section-with-bottom-border {
+        border-bottom: 2px solid $gray;
+      }
+    }
+  }
+}
+
+/* Form Header Setting */
+
+@if $theme-dark==true {
+  @include theme(dark);
+}
+
+@if $theme-dark==false {
+  @include theme(light);
+}

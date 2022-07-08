@@ -1,0 +1,156 @@
+﻿// Backgrounds mixin
+// -------------------------
+@mixin panel-bg($bg) {
+    background: $bg !important;
+    background-color: $bg !important;
+}
+
+// Custom mixins for hardware acceleration for webkit
+// --------------------------------------------------
+@mixin webkitForceHardwareAcceleration() {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-radius-important($radius) {
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius !important;
+    -ms-border-radius: $radius !important;
+    border-radius: $radius !important;
+}
+
+@mixin box-shadow($args) {
+    -webkit-box-shadow: $args;
+    -moz-box-shadows: $args;
+    -ms-box-shadow: $args;
+    box-shadow: $args;
+}
+
+@mixin background-gradient() {
+    background: rgba($body-bg, 1);
+    background: -moz-linear-gradient(rgba($body-bg, 1), rgba($body-bg, 1));
+    background: -webkit-linear-gradient(rgba($body-bg, 1), rgba($body-bg, 1));
+    background: linear-gradient(rgba($body-bg, 1), rgba($body-bg, 1));
+}
+
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+}
+
+@mixin progress-stripe() {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+}
+
+@mixin fade-in-out() {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+@mixin ease-in-out() {
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+@mixin slide-label() {
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+@mixin select() {
+    background-image: url('/Content/img/select-dropdown.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    background-size: 15px auto !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+@mixin scale1_1() {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+@mixin tile-header() {
+    background: $tile-header-color;
+    border-bottom: 3px solid $footer-bg-color;
+    padding: 10px 15px;
+    font-family: $roboto;
+    @include border-radius(10px 10px 0 0);
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    box-shadow: 1px 1px 3px 0 $tile-header-color;
+}
+
+
+@mixin tile-footer() {
+    background: $tile-footer;
+    text-align: center;
+    padding: 5px 0;
+    @include border-radius(0 0 10px 10px);
+    box-shadow: 1px 0 3px 0 $tile-header-color;
+
+}
+
+@mixin tile-body() {
+    background: $tile-body-bg-color;
+    box-shadow: 1px 0px 4px 0px $tile-header-color;
+    padding: 12px 15px 1px;
+
+    img {
+        @include border-radius(50%);
+        width: 80px;
+        border: 3px solid $sidebar;
+    }
+
+    .tile-info {
+        font-family: $roboto;
+
+        label {
+            color: $sidebar;
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin person-icon() {
+    content: "\f212";
+    font-family: 'Ionicons';
+}
+
+@mixin ellipsis() {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

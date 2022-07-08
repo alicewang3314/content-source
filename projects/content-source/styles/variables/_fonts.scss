@@ -1,0 +1,111 @@
+﻿
+/* -------------------------------
+   13.0 Update - v1.2
+------------------------------- */
+
+/* 13.1 Font Family - Open Sans  */
+
+body.font-open-sans,
+body.font-open-sans .gritter-item-wrapper .gritter-item {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+body.font-open-sans .navbar-brand,
+body.font-open-sans .sidebar,
+body.font-open-sans .btn,
+body.font-open-sans .checkbox label,
+body.font-open-sans .radio label,
+body.font-open-sans .checkbox-inline,
+body.font-open-sans .radio-inline,
+body.font-open-sans .mail-detail-info .email-to,
+body.font-open-sans .mail-detail-info .email-date,
+body.font-open-sans .panel.panel-default .panel-heading .panel-title,
+body.font-open-sans .panel.panel-inverse .panel-heading .panel-title,
+body.font-open-sans .panel.panel-purple .panel-heading .panel-title,
+body.font-open-sans .panel.panel-primary .panel-heading .panel-title,
+body.font-open-sans .panel.panel-success .panel-heading .panel-title,
+body.font-open-sans .panel.panel-warning .panel-heading .panel-title,
+body.font-open-sans .panel.panel-danger .panel-heading .panel-title,
+body.font-open-sans .panel.panel-info .panel-heading .panel-title,
+body.font-open-sans .panel.panel-lime .panel-heading .panel-title,
+body.font-open-sans .panel.panel-grey .panel-heading .panel-title,
+body.font-open-sans .fullcalendar .fullcalendar-event .fc-event,
+body.font-open-sans .fullcalendar .fc-day-grid-event, .fullcalendar .fc-day-grid-event:hover,
+body.font-open-sans .fullcalendar .fc-day-grid-event:focus,
+body.font-open-sans .fullcalendar .fc-view-container .fc-event,
+body.font-open-sans .fullcalendar .fc-view-container .fc-event:hover,
+body.font-open-sans .fullcalendar .fc-view-container .fc-event:focus {
+    font-weight: normal;
+}
+
+body.font-open-sans .fullcalendar .fc th {
+    font-weight: normal !important;
+}
+
+body.font-open-sans .mail-box-user-list > li a {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+body.font-open-sans .table > thead > tr > th,
+body.font-open-sans .gritter-item-wrapper .gritter-title,
+body.font-open-sans .h1, body.font-open-sans .h2, body.font-open-sans .h3,
+body.font-open-sans .h4, body.font-open-sans .h5, body.font-open-sans .h6,
+body.font-open-sans h1, body.font-open-sans h2, body.font-open-sans h3,
+body.font-open-sans h4, body.font-open-sans h5, body.font-open-sans h6 {
+    font-weight: 600;
+}
+
+
+/* 13.2 Font Family - Roboto  */
+
+body.font-roboto,
+body.font-roboto .gritter-item-wrapper .gritter-item {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.25px;
+}
+
+body.font-roboto .navbar-brand {
+    font-weight: 300;
+}
+
+body.font-roboto .mail-box-user-list > li a {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+/* 13.3 Font Family - Lato  */
+
+body.font-lato,
+body.font-lato .gritter-item-wrapper .gritter-item {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.25px;
+}
+
+body.font-lato .navbar-brand {
+    font-weight: 300;
+}
+
+body.font-lato .mail-box-user-list > li a {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+/* 13.4 Font Family - Helvetica, Arial  */
+
+body.font-helvetica-arial {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 0.5px;
+}
+
+body.font-helvetica-arial .navbar-brand {
+    font-weight: 300;
+}
+
+body.font-helvetica-arial .mail-box-user-list > li a {
+    font-weight: 300;
+    font-size: 13px;
+}

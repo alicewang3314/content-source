@@ -1,0 +1,353 @@
+﻿// Variables
+// --------------------------------------------------
+
+//== Colors
+//## Gray and brand colors for use across Bootstrap.
+$white: #fff;
+$white-opaque: rgba(255, 255, 255, 0.95);
+$white-more-opaque: rgba(255, 255, 255, 0.9);
+$white-less-transparent:rgba(255, 255, 255, 0.8);
+$white-medium-opaque: rgba(255, 255, 255, 0.5);
+$white-less-opaque: rgba(255, 255, 255, 0.15);
+$white-lighter-opaque: rgba(255, 255, 255, 0.1);
+$white-txt: #003d7c;
+$txtnav-txt:$white;
+$black: #003d7c;
+$blacknav: #003d7c;
+$black-light: #222;
+$light-black: #212121;
+$sidebar: #eee;
+$sidebarnav: #eee;
+$sub-menu: rgba(48, 55, 62, 0.28);
+$shark: rgba(39, 44, 49, 0.9);
+
+$gray-darker:$white;
+$gray-dark: #30373e;
+$gray-less-dark: #888f95;
+$gray-solid: #808080;
+$gray: $white;
+$gray-med: #8f8f8f;
+$gray-light: #827777;
+$gray-white: #aaa;
+$gray-dark-white: #b1b1b1;
+$gray-light-white: #D4D5D6;
+$gray-lighter-white: #dfe0e1;
+$gray-lighter: lighten($black, 93.5%);
+$gray-less: #ebeced;
+$gray-lesser: #f9f9f9;
+$gray-modal: #494949;
+$gray-orange: #fff;
+$cod-gray: rgba(244, 247, 246, 0.68);
+$gray-blue: #595F64;
+$gray-dark-blue: #BBC2C7;
+$hit-gray: #aab3ba;
+$silver-sand: #bcbdbe;
+$nobel: rgba(187, 184, 184, 0.92);
+$porcelain: #EAEDEF;
+
+
+$black-real-transparent: rgba(0, 0, 0, 0);
+$black-higher-transparent: rgba(0, 0, 0, 0.025);
+$black-high-transparent: rgba(0, 0, 0, 0.07);
+$black-less-opaque: rgba(0, 0, 0, 0.125);
+$black-lesser-opaque: rgba(0, 0, 0, 0.175);
+$black-lighter-transparent: rgba(0, 0, 0, 0.2);
+$black-less-transparent: rgba(0, 0, 0, 0.25);
+$black-light-transparent: rgba(0, 0, 0, 0.3);
+$black-medium-transparent: rgba(0, 0, 0, 0.5);
+$black-medium-opaque: rgba(0, 0, 0, 0.6);
+$black-lighter-opaque: rgba(0, 0, 0, 0.8);
+$black-light-opaque: rgba(0, 0, 0, 0.87);
+$black-high-opaque: rgba(0, 0, 0, 0.92);
+$black-higher-opaque: rgba(0, 0, 0, 0.96);
+
+
+
+$red:#eb0000;
+$red-light: #eb0000;
+$red-dark: #eb0000;
+$delete: #eb0000;
+$red-darkest: #eb0000;
+$dark-maroon: #451118;
+
+$blue: #0768cc;
+$blue-light: #29b6d8;
+$blue-light-dark: #38AFD3;
+$blue-dark: #031D39;
+$top-blue: #0768cc;
+$bot-blue: #020d19;
+$curious-blue: #2184DA;
+$havelock-blue: #4D9CE1;
+$viking: #5FBFDB;
+
+$green: #a6a621;
+$green-light: #66c796;
+$green-dark-light: #65C56F;
+$green-dark: #47a877;
+$green-darker: $blue;
+
+$yellow: #F8971D;
+$yellow-light: #003d7c;
+$yellow-med: #003d7c;
+$yellow-dark: darken($yellow, 10%);
+$yellow-header: rgba(202, 117, 10, 0.77);
+$yellow-darker: #7B4604;
+$yellow-agent: #C3781A;
+
+$orange: #ece2e2;
+$orange-dark: #9F5D0A;
+$orange-light: #fcaf41;
+
+$irish-coffee: rgba(95, 69, 37, 0.77);
+$dark: #fff;
+$dark-darker: #0f1112;
+$dark-light: lighten($dark, 5%);
+$dark-dark: darken($dark, 5%);
+$dark-blue: #3c454d;
+
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: $blue-light;
+$brand-warning: $yellow;
+$brand-danger: $red;
+
+$transparent: transparent;
+
+$mainColor: $blue;
+$transparent-black: $black-medium-transparent;
+$transparent-dark-black: rgba(0, 0, 0, 0.9);
+/*Other colors form themes*/
+
+$clean-gray-med: #171515;
+$clean-gray-dark: #101113;
+$wood-smoke: rgba(16, 17, 19, 0.66);
+$clean-gray-darker: #3F4040;
+$mine-shaft: #333;
+$clean-light: #E8E8E8;
+
+$merica-blue: #2C3E50;
+$merica-red: $red-darkest;
+$merica-white: #ECF0F1;
+$merica-blue-light-dark: #1e77C5;
+$merica-blue-lt: #3498DB;
+$merica-blue-med: #2980B9;
+
+$jelly-bean: #2d8ca9;
+
+$white-blue: #E1E6FA;
+$white-blue-med: #6290bc;
+$white-blue-dark: #ABC8E2;
+$ocean-blue: #375D81;
+$navy-blue: #183152;
+
+$white-green: #F6FFE0;
+$white-green-med: #E2F0D6;
+$white-green-dark: #BDD684;
+$ocean-green: #95AB63;
+$navy-green: #10222B;
+$de-york: #83D08B;
+$fruit-salad: #519e59;
+
+$penn-blue: #263248;
+$penn-blue-med: #7E8AA2;
+$penn-yellow: #FF9800;
+
+$magic-base: #FF5156;
+$magic-dark: #593634;
+
+$cell: #7E6D9C;
+$cell-gray: #897F98;
+$cell-black: #141414;
+
+$purple: #7C4792;
+$purple-light: #9b59b6;
+$purple-lighter: #AF7AC4;
+
+
+$dutch-base: #CDE855;
+$dutch-white: #F5F6D4;
+$dutch-med: #85DB18;
+$dutch-dark: #191604;
+
+$presque-white: #E6E2AF;
+$presque-base: #046380;
+$presque-med: #A7A37E;
+$presque-dark: #002F2F;
+
+
+// FONTS
+
+$questrial: 'Questrial',
+sans-serif;
+$abc: 'ABeeZee',
+sans-serif;
+$nunito: 'Nunito',
+sans-serif;
+$news: 'News Cycle',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
+$nobile: 'Nobile',
+sans-serif;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+$body-bg: #e4e1e1;
+$text-color: $gray-dark;
+
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 15%);
+$navbar-bg: #a6a621;
+$navbar-nav-color: $text-color;
+
+$sidebar-bg: $dark-light;
+$sidebar-width: 250px;
+$sidebar-collapse-width:70px;
+$sidebar-link-height: 50px;
+$navbar-height: 55px;
+
+$right-sidebar-bg: $white;
+$right-sidebar-width: 0px;
+
+$nav-active-bg: $dark;
+$nav-active-color: #fff;
+$nav-icon-color: $clean-gray-med;
+$nav-hover-bg: $dark-dark;
+$nav-hover-color: $yellow;
+$nav-sub-bg: $nav-hover-bg;
+
+$border-color: #ccc;
+
+$content-padding: 20px;
+
+$rotator-img-width: 150px;
+
+$border-radius-base: 5px;
+
+
+
+$tile-body-color:#eee;
+$tile-label-color:#000;
+$tile-header-color:$yellow-med;
+$widget-orange:#F0AD4E;
+
+$dates-border:#eee;
+
+$dates-hover : $tile-label-color;
+$input-addon-color:$white;
+$icon-color: $yellow;
+$icon2-color: #fff;
+$nav-elem-hover-color: #fff;
+$footer-bg-color:#ec971f;
+$header-txt :$white;
+$label-txt-color:$yellow-med;
+$badge-bg-color:$widget-orange;
+$formcontrol-border-color:#9e9e9e;
+$formcontrol-bg-color:#fff;
+$nav-pills-active:$yellow-med;
+$nav-pills-hover:darken($gray-light, 20%);
+$uib-daypicker-btn-bg-color:#666666;
+$uib-daypicker-btn-bg-hover:#bbbbbb;
+
+//Notification color
+$notification_active_btn:$yellow-med;
+$notification-inactive-btn:$gray-light;
+$notification-header-bg:$blacknav;
+$switch-hover:rgba(248, 151, 29, 0.77);
+$notification-header-bg-hover:darken($gray-light, 20%);
+$form-control-border-color:#9e9e9e;
+$form-control-disable-color:$white;
+$input-datefield-color:#9e9e9e;
+$tile-body-bg-color: #f0f8ff;
+$form-grp-hover:$yellow-med;
+$mce-bg:#e4e1e1;
+$mce-toolbar-grp:#003d7c;
+$mce-toolbar-grp-bg-color:#003d7c;
+$input-group-addon-right-search:#ffffff;
+//Datepicker color
+$uib-datepicker-popup-btn-bgcolor:black;
+$uib-datepicker-popup-btn-hover-color:#eee;
+$tile-info-color:black;
+//Pagination color
+$pagination-bg-color:#dddddd;
+$pagination-color:#101113;
+$flip-color:#003d7c;
+$card-front-info-label:$yellow-med;
+$tile-footer:#eee;
+//Radio button color
+//$radio-custom-label:#2892ff;
+$radio-custom-label:#ec971f;
+$radio-custom-color:#ffffff;
+$radio-custom-bg-color:#ccc;
+$custom-dropdown-bg-color:#2892ff;
+$customDropdown-dropdown-menu-li: $gray-light;
+$accordian-bg-color:#f1e9e9;
+$input-text-color:$white-txt;
+$notes-text-body-color:#000;
+$table-header-bg:#827777;
+// $sidebar-nav-header:$yellow-med;
+$calender-uib-title:#003d7c;
+$calender-uib-year:#f1e9e9;
+$calender-disabled:#eee;
+$calender-dates:#666;
+$calender-disabled-dates:#948080;
+$tinymce-bg:$dark;
+$tinymce-footer-bg:#003d7c;
+$tinymce-bar-text-color:#fff;
+
+$delete-button-text-color:#fff;
+$profile-background:#fff;
+$check-box-color:#fff;
+$check-box-background:#ccc;
+$sidebar-text-color:#171515;
+$dropdown-text:$white-txt;
+
+
+//pagination Varibles
+$pageActiveTextColor:$white;
+//table tile active variable
+$tableTileActive: $white;
+//tabs which are not selected
+$tabGray: #9ba1aa;
+//disabled date picker dates
+$disabledDate:$uib-daypicker-btn-bg-hover;
+//active date picker date color
+$activeDate: $white;
+$spinner-background:$sidebar;
+$spinner-circle:$black;
+
+//for view and clear buttons on the pancakes tile
+$default-button:#ec971f;
+$default-buttonText:$white;
+$secondaryButton:$gray-light;
+$secondaryButtonText: $white;
+//widget background color
+$widgetBackground :#f4f7f6;
+
+//table header background
+$tableHeaderBg :$black;
+$tableBorder : $footer-bg-color;
+$tableTextColor : $widgetBackground;
+$table-background:$tile-body-color;
+//modal-content 
+$modalContentBackground : #fcf8e3;
+//modal content h4 tag
+$modalContentHeader:$black;
+//mainTask panel body( follow ups)
+$followupPanelBody : $white;
+$accordionBackground:$widgetBackground;
+$accordionHeaderBackground:$widgetBackground;
+//client profile full view td background color
+$clientTableRow:$widgetBackground;
+$footer-text-color:$white;
+$menu-minify-color:$body-bg;
+$slider-checkbox-bg:$green-darker;
+$disable-tile:#b9bbbd;
+//condtional varible
+$theme-dark:$radio-custom-label;
+$placeholder-color:$white-txt;
+
+$theme-dark:false;
