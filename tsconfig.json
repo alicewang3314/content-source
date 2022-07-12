@@ -12,6 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "components": [
+        "dist/components"
+      ],
       "contentSource": [
         "dist/content-source"
       ],
