@@ -1,0 +1,27 @@
+<mat-form-field color="primary" [class.mat-form-field-invalid]="showErr" appearance="outline">
+  <!-- Single select -->
+  <mat-select *ngIf="!multi" color="primary" [class.mat-select-invalid]="showErr" [formControl]="control" [placeholder]="placeholder"
+    (openedChange)="onSelectToggle($event)">
+    <input id="filter" #filter autocomplete="off" matInput placeholder="filter" class="select-filter" [ngModel]="query"
+      (ngModelChange)="filterValue($event)">
+    <mat-option>--None--</mat-option>
+    <mat-option *ngFor="let item of displayEntries" [value]="item.value">{{item.name}}</mat-option>
+  </mat-select>
+  <!-- Multiple select -->
+  <mat-select *ngIf="multi" [formControl]="control" multiple (openedChange)="onSelectToggle($event)" [placeholder]="placeholder">
+    <div class="select-actions">
+      <button mat-button (click)="selectAll()">
+        <mat-icon> check</mat-icon>
+        Check All
+      </button>
+      <button mat-button (click)="unselectAll()">
+        <mat-icon>close</mat-icon>
+        Uncheck All
+      </button>
+    </div>
+    <input #filter class="select-filter" autocomplete="off" matInput placeholder="filter" class="select-filter"
+      [ngModel]="query" (ngModelChange)="filterValue($event)">
+    <mat-option *ngFor="let item of displayEntries" [value]="item.value">{{item.name}}</mat-option>
+  </mat-select>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>

@@ -1,12 +1,22 @@
 {
   "name": "components",
   "version": "0.0.1",
+  "exports": {
+    "./theme": {
+      "sass": "./captor-theme/captor-theme.scss"
+    }
+  },
   "peerDependencies": {
+    "@angular/animations": "^14.0.0",
+    "@angular/cdk": "~14.0.4",
     "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0"
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0",
+    "@angular/material": "~14.0.4",
+    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser-dynamic": "^14.0.0"
   },
   "dependencies": {
-    "@angular/material": "^14.0.4",
     "tslib": "^2.3.0"
   }
 }

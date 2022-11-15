@@ -1,0 +1,28 @@
+.select {
+  &-filter {
+    line-height: 40px;
+    width: calc(100% - 1em);
+    margin-left: 1em;
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border-bottom: 1px solid grey;
+      border-radius: 0;
+    }
+
+    .mat-icon {
+      font-weight: 900;
+      font-size: 20px;
+    }
+  }
+}
+
+:host::ng-deep {
+  .mat-placeholder-required.mat-form-field-required-marker {
+    visibility: hidden;
+  }
+}

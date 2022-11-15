@@ -1,0 +1,29 @@
+<!-- date -->
+<mat-form-field appearance="outline" *ngIf="type == 'date'" [class.mat-form-field-invalid]="showDateErr">
+  <input matInput [formControl]="control" [matDatepicker]="picker" placeholder="MM/DD/YYYY" [min]="minDate"
+    [max]="maxDate" [readonly]="readonly" autocomplete="off">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  <mat-error *ngIf="showDateErr">{{getDateErrMsg()}}</mat-error>
+  <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+</mat-form-field>
+
+<!-- date range -->
+<mat-form-field appearance="outline" *ngIf="type == 'dateRange'" [class.mat-form-field-invalid]="showDateRangeErr">
+  <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker" [min]="minDate" [max]="maxDate">
+    <input matStartDate placeholder="MM/DD/YYYY" formControlName="start">
+    <input matEndDate placeholder="MM/DD/YYYY" formControlName="end">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+  <mat-error *ngIf="showDateRangeErr">{{getDateRangeErrMsg()}}</mat-error>
+  <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+</mat-form-field>
+
+<!--Dev log-->
+<!-- <div *ngIf="type==='dateRange'">
+  control: {{control.errors | json}} <br />
+  dateRange: {{ dateRangeErr }} <br/>
+  {{dateRange.invalid | json }}
+  {{dateRange.errors | json}}
+</div> -->

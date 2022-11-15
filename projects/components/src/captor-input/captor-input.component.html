@@ -1,0 +1,84 @@
+<!-- ssn -->
+<mat-form-field appearance="outline" *ngIf="type == 'ssn'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [placeholder]="placeholder" [readonly]="readonly" autocomplete="off" [formControl]="control" ssnMask>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- Phone number -->
+<mat-form-field appearance="outline" *ngIf="type == 'tel'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [placeholder]="placeholder" [readonly]="readonly" autocomplete="off" [formControl]="control" phoneMask>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!--- password -->
+<mat-form-field appearance="outline" *ngIf="type == 'password'" [class.mat-form-field-invalid]="showErr">
+  <input type="password" matInput autocomplete="off" [placeholder]="placeholder" [formControl]="control">
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- email -->
+<mat-form-field appearance="outline" *ngIf="type == 'email'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [formControl]="control" [readonly]="readonly" [placeholder]="placeholder" autocomplete="off">
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- zipcode -->
+<mat-form-field appearance="outline" *ngIf="type == 'zipcode'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [formControl]="control" [readonly]="readonly" [placeholder]="placeholder" autocomplete="off"
+    zipcodeMask>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- zipcodeExt -->
+<mat-form-field appearance="outline" *ngIf="type == 'zipcodeExt'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [formControl]="control" [readonly]="readonly" [placeholder]="placeholder" autocomplete="off"
+    zipcodeExtMask>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- date -->
+<!-- <mat-form-field appearance="outline" *ngIf="type == 'date'" [class.mat-form-field-invalid]="showErr">
+  <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" [min]="minDate"
+    [max]="maxDate" [readonly]="readonly" autocomplete="off">
+  <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- date range -->
+<!-- <mat-form-field appearance="outline" *ngIf="type == 'dateRange'" [class.mat-form-field-invalid]="showErr">
+  <mat-date-range-input [rangePicker]="picker" [min]="minDate" [max]="maxDate">
+    <input matStartDate placeholder="MM/DD/YYYY">
+    <input matEndDate placeholder="MM/DD/YYYY">
+  </mat-date-range-input>
+  <mat-hint *ngIf="hint">{{hint}}</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field> -->
+
+<!--textarea-->
+<mat-form-field appearance="outline" *ngIf="type == 'textarea'" [class.mat-form-field-invalid]="showErr">
+  <textarea matInput [formControl]="control" [readonly]="readonly" [placeholder]="placeholder"></textarea>
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!--number-->
+<mat-form-field appearance="outline" *ngIf="type=='number'" [class.mat-form-field-invalid]="showErr">
+  <input type="number" matInput [placeholder]="placeholder" [readonly]="readonly" autocomplete="off"
+    [formControl]="control">
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+<!-- default text input-->
+<mat-form-field appearance="outline" *ngIf="!type" [class.mat-form-field-invalid]="showErr">
+  <input matInput [placeholder]="placeholder" [readonly]="readonly" autocomplete="off" [formControl]="control">
+  <mat-error *ngIf="showErr">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+
+
+<!-- dev logs -->
+<!-- <br />
+{{control.errors | json}}
+isFormSubmitted: {{ isFormSubmitted}} <br />
+control not valid: {{control.invalid}}<br />
+ifShowErr: {{showErr}}<br /> -->

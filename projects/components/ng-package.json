@@ -3,5 +3,15 @@
   "dest": "../../dist/components",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "src/captor-theme/",
+      "ignore": [
+        "**/*.*.ts"
+      ],
+      "output": "captor-theme/"
+    }
+  ]
 }
